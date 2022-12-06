@@ -7,11 +7,14 @@ import Details from "./pages/details-promo";
 import Home from "./pages/home/Home";
 import Topup from "./components/topup/topup";
 import Index from "./pages/landingpage/Index";
-import { History } from "./pages";
+import { History, Invoice } from "./pages";
 import Payment from "./pages/payment/Index"
 import Register from "./components/register/index"
 import Login from "./components/login/index"
 import Setting from "./pages/setting/Setting";
+import CardHistory from "./components/card-history";
+import { Bill, PaymentBill } from "./components";
+
 
 
 
@@ -30,6 +33,10 @@ function App(){
         <Route path="/register" element={<Register/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/setting" element={<Setting/>}/>
+        <Route path="/invoice" element={<Invoice/>}/>
+        <Route path="/ch" element={<CardHistory/>}/>
+        <Route path="/bill" element={<Bill/>}/>
+        <Route path="/pay" element={<PaymentBill/>}/>
       </Routes>
     </BrowserRouter>
    </>
