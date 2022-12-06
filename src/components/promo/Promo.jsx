@@ -12,11 +12,9 @@ import promo5 from "./../../assets/2.png";
 const Content = () => {
   return (
     <>
-      <div>
-        <Navigation></Navigation>
-        <Hero></Hero>
-        <Banner></Banner>
-      </div>
+      <Navigation></Navigation>
+      <Hero></Hero>
+      <Banner></Banner>
     </>
   );
 };

@@ -11,6 +11,7 @@ import { History } from "./pages";
 import Payment from "./pages/payment/Index"
 import Register from "./components/register/index"
 import Login from "./components/login/index"
+import Setting from "./pages/setting/Setting";
 
 
 
@@ -28,7 +29,7 @@ function App(){
         <Route path="/payment" element={<Payment/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/login" element={<Login/>}/>
-
+        <Route path="/setting" element={<Setting/>}/>
       </Routes>
     </BrowserRouter>
    </>

@@ -24,13 +24,13 @@ const Home = () => {
   const Navigate = useNavigate();
   return (
     <>
-      <Navigation></Navigation>
-      <div className="container mt-24">
-        <h1 className="text-1xl font-bold font-[poppins]">
-          Welcome Back Muhammad Farizqi Nurdin
-        </h1>
+      <div className="container-lg">
+        <Navigation></Navigation>
+        <div className="container mt-24">
+          <h1 className="text-1xl font-bold font-[poppins]">
+            Welcome Back Muhammad Farizqi Nurdin
+          </h1>
 
-        <Container>
           <div className="row">
             <div className="col-md-4">
               <Card className="bg-slate-100 mt-3" style={{ width: "20rem" }}>
@@ -136,10 +136,8 @@ const Home = () => {
               </Card>
             </div>
           </div>
-        </Container>
-      </div>
-      <footer>
-        <div className="container">
+        </div>
+        <footer>
           <div className="row">
             <div className="col-12 text-center pt-1 pb-1 my-3">
               <p className="text-green-500 fw-bold">
@@ -148,8 +146,8 @@ const Home = () => {
               </p>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </>
   );
 };
