@@ -1,26 +1,50 @@
 import React from "react";
+import api from "../../services/api";
+import { useState } from "react";
+import { useEffect } from "react";
 import { AiFillCaretLeft } from "react-icons/ai";
-
-const Navbar = () => {
-  
-
-  return (
-    <div className="w-full shadow shadow-xl shadow-kedua ring-2 ring-kedua z-50 fixed top-0">
-      <div className=" bg-gray-50 py-4 md:justify-between md:px-10 px-7">
-        <div className="grid grid-flow-col grid-cols-4 grid-rows-1 pr-48">
-          <div className="grid justify-items-start md:justify-between col-span-1"><img className='w-40 h-8' src={require("../navbar/loops.png")} alt=""/></div>
-          <div className="grid justify-items-end col-span-1 pt-0.5 pr-1.5">
-            <AiFillCaretLeft className="w-14 h-7 text-kedua hover:text-white  hover:bg-utama rounded-full"
-            />
-          </div>
-          <div className="col-span-1 font-serif text-2xl text-left font-semibold text-kedua">
-            List Of Transaction
-          </div>
-          <div></div>
-        </div>
-      </div>
-    </div>
-  );
+const CardHistory = () => {
+  const [products, setProducts] = useState([]);
+  //  const navigate = useNavigate();
+  const fetchProducts = async () => {
+    try {
+      const url = "/users";
+      const response = await api.get(url);
+      const payload = [...response?.data];
+      console.log(payload);
+      setProducts(payload || []);
+    } catch (error) {
+      alert(error);
+    }
   };
 
-export default Navbar;
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  return (
+    <div>
+        {products.map((item) => {
+          return (
+      <div className="grid grid-cols-1 justify-items-center bg-utama h-32 place-items-center">
+        <div className="bg-white w-2/5 text-center
+        rounded-lg font-serif text-sm font-semibold">
+          <div className="hover:bg-utama hover:ring-2 hover:ring-white py-3
+          rounded-lg hover:text-white ring-2 ring-kedua shadow-xl shadow-kedua">
+            <div className="grid grid-flow-col grid-cols-5 items-center grid-rows-2">
+                <div className=" col-span-1 row-span-2 ml-3"><AiFillCaretLeft /></div>
+                <div className=" col-span-2 row-span-1 text-left">{item?.username}</div>
+                <div className=" col-span-2 row-span-1 text-left">Rp {item?.id}0.000</div>
+                <div className=" col-span-2 row-span-2 text-right mr-3">{item?.name || "ga ada"}</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      );
+    })}
+    </div>
+  );
+};
+
+export default CardHistory;
