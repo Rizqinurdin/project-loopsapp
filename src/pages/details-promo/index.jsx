@@ -1,7 +1,6 @@
 import React from "react";
 import Navigation from "../../components/header/Navigation";
-import Promo from "../../assets/9.png";
-import {} from "react-bootstrap";
+import hero3 from "./../../assets/logo/holiday.png";
 
 const Details = () => {
   return (
@@ -9,10 +8,10 @@ const Details = () => {
       <div className="container-lg mt-24">
         <Navigation />
         <h1 className="text-center text-3xl font-bold font-[poppins]">
-          Bayar Pakai Kartu di DANA Kartu BRI <br /> Mastercard Untung s/d
+          Bayar Pakai Kartu di LoopsApp Kartu BRI <br /> Mastercard Untung s/d
           Rp110Rb
         </h1>
-        <img src={Promo} class="img-fluid mx-auto mt-4 w-auto" alt="..." />
+        <img src={hero3} class="img-fluid mx-auto mt-4 w-auto" alt="..." />
 
         <h1 className="mt-5 font-bold">Syarat dan Ketentuan</h1>
         <div className="container mt-2">

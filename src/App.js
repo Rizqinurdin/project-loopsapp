@@ -7,16 +7,14 @@ import Details from "./pages/details-promo";
 import Home from "./pages/home/Home";
 import Topup from "./components/topup/topup";
 import Index from "./pages/landingpage/Index";
-import { History, Invoice } from "./pages";
+import History from "./pages/history/index";
+import Invoice from "./pages/invoice/Index"
 import Payment from "./pages/payment/Index"
 import Register from "./components/register/index"
 import Login from "./components/login/index"
 import Setting from "./pages/setting/Setting";
 import CardHistory from "./components/card-history";
 import { Bill, PaymentBill } from "./components";
-
-
-
 
 function App(){
   return (

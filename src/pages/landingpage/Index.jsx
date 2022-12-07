@@ -39,13 +39,19 @@ const Index = () => {
         <div className="container">
           <img className="w-20" src={logo} alt="logo" />
           <Nav className="mr-5 font-[poppins]">
-            <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#">Payment</Nav.Link>
-            <Nav.Link href="#">Promo</Nav.Link>
-            <Nav.Link href="#">History</Nav.Link>
-            <Nav.Link href="#">Sign in</Nav.Link>
+            <Nav.Link href="/login">Home</Nav.Link>
+            <Nav.Link href="/login">Payment</Nav.Link>
+            <Nav.Link href="/login">Promo</Nav.Link>
+            <Nav.Link href="/login">History</Nav.Link>
             <a
-              href="#"
+              href="/login"
+              className="inline-flex items-center mr-1 px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+            >
+              Sign In
+            </a>
+
+            <a
+              href="/register"
               className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
             >
               Sign up

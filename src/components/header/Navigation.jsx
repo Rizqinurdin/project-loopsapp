@@ -14,10 +14,10 @@ const Navigation = () => {
         >
           <img className="w-20" src={logo} alt="logo" />
           <Nav className="ms-auto font-[poppins]">
-            <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#">Payment</Nav.Link>
-            <Nav.Link href="#">Promo</Nav.Link>
-            <Nav.Link href="#">History</Nav.Link>
+            <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/payment">Payment</Nav.Link>
+            <Nav.Link href="/promo">Promo</Nav.Link>
+            <Nav.Link href="/history">History</Nav.Link>
             <Nav.Link href="#"></Nav.Link>
             <NavDropdown
               title="Hi Muhammad Farizqi Nurdin"

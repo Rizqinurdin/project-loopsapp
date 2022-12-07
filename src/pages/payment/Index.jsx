@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "../../components/header/Navigation";
+import Hero from "../../components/hero/Hero";
 import Banner4 from "../../assets/11.png";
 import Sale from "../../assets/sale.svg";
 import Sale1 from "../../assets/sale1.svg";
@@ -18,7 +19,7 @@ import listrik from "./../../assets/logo/listrik.png";
 import pdam from "./../../assets/logo/pdam1.png";
 
 import { Carousel } from "antd";
-import { Form, Button, Container } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 
 const Index = () => {
   const onChange = (currentSlide) => {
@@ -28,13 +29,13 @@ const Index = () => {
     <>
       <section className="container-lg">
         <Navigation></Navigation>
-        <img src={Sale} class="max-w-full h-auto" alt="..." />
+        <Hero></Hero>
         <h1 className="text-center text-2xl mt-5 font-[poppins]">
           Payment LoopsApp
         </h1>
         <div className="row mt-4 justify-content-center">
           <div className="col-md-4 rounded-lg bg-green-200 hover:bg-green-100  m-4">
-            <a href="#">
+            <a href="/bill">
               <img className="ml-auto mr-auto" src={bpjs} alt="" />
             </a>
           </div>

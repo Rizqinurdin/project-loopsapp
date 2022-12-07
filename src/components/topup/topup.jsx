@@ -23,7 +23,7 @@ function Topup() {
   return (
     <>
       <Navigation></Navigation>
-      <div className="Payment mt-5">
+      <div className="Payment mt-5 font-[poppins]">
         <div
           style={{ display: "flex", justifyContent: "center", padding: 40.0 }}
         >
@@ -32,7 +32,7 @@ function Topup() {
             style={{ display: "flex", justifyContent: "center", padding: 40.0 }}
           >
             <form>
-              <h3>Metode Topup</h3>
+              <h3 className="font-[poppins]">Metode Topup</h3>
               <br />
 
               <div className="mb-3">
@@ -46,7 +46,7 @@ function Topup() {
               <div className="d-grid">
                 <button
                   type="submit"
-                  className="btn hover:bg-green-400 bg-green-500 text-white"
+                  className="btn hover:bg-green-400 bg-green-500 text-white font-[poppins]"
                 >
                   Top Up
                 </button>
