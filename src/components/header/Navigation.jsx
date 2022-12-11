@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import logo from "./../../assets/logo.svg";
-import user from "./../../assets/user.svg";
+import logo from "./../../assets/logo/logo.svg";
+import user from "./../../assets/logo/user.svg";
 
 const Navigation = () => {
   return (

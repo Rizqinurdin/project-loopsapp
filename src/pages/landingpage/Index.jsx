@@ -8,19 +8,13 @@ import {
   Card,
   Figure,
 } from "react-bootstrap";
-import logo from "./../../assets/logo.svg";
-import user from "./../../assets/user.svg";
-import hero1 from "./../../assets/11.png";
-import hero2 from "./../../assets/10.png";
-import hero3 from "./../../assets/9.png";
-import Promo from "../../assets/icon1.png";
-import Pay from "../../assets/icon2.png";
-import History from "../../assets/icon3.png";
-import Working from "../../assets/workingspace.png";
-import Keamanan from "./../../assets/kemanan.png";
-import Sistem from "./../../assets/layanan.png";
-import Layanan from "./../../assets/sistem.png";
-import User1 from "./../../assets/user.svg";
+import logo from "./../../assets/logo/logo.svg";
+import user from "./../../assets/logo/user.svg";
+import History from "../../assets/logo/icon3.png";
+import Working from "../../assets/logo/workingspace.png";
+import Keamanan from "./../../assets/logo/kemanan.png";
+import Sistem from "./../../assets/logo/layanan.png";
+import Layanan from "./../../assets/logo/sistem.png";
 import Hero from "../../components/hero/Hero";
 import listrik from "./../../assets/logo/listrik.png";
 import bpjs from "./../../assets/logo/bpjs1.png";
@@ -172,16 +166,11 @@ const Index = () => {
                 width={50}
                 height={50}
                 alt="171x180"
-                src={User1}
+                src={user}
               />
             </Figure>
             <Figure>
-              <Figure.Image
-                width={100}
-                height={100}
-                alt="171x180"
-                src={User1}
-              />
+              <Figure.Image width={100} height={100} alt="171x180" src={user} />
               <Figure.Caption>
                 <h5 className="text-center font-bold text-sm font-[poppins]">
                   Rizqinurdin
@@ -195,7 +184,7 @@ const Index = () => {
                 width={50}
                 height={50}
                 alt="171x180"
-                src={User1}
+                src={user}
               />
             </Figure>
           </div>

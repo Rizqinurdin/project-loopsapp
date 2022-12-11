@@ -2,13 +2,9 @@ import React from "react";
 import { Carousel } from "antd";
 import Navigation from "../../components/header/Navigation";
 import { Card, Button } from "react-bootstrap";
-import Promo from "../../assets/icon1.png";
-import Pay from "../../assets/icon2.png";
-import History from "../../assets/icon3.png";
-import Banner1 from "../../assets/3.png";
-import Banner2 from "../../assets/2.png";
-import Banner3 from "../../assets/15.png";
-import Banner4 from "../../assets/11.png";
+import Promo from "../../assets/logo/icon1.png";
+import Pay from "../../assets/logo/icon2.png";
+import History from "../../assets/logo/icon3.png";
 import Setting from "../../assets/logo/settings.png";
 import { useNavigate } from "react-router-dom";
 

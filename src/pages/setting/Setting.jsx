@@ -1,7 +1,49 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import Navigation from "../../components/header/Navigation";
+import api from "../../services/api";
 
 const Setting = () => {
+  const [provinces, setProvinces] = useState([]);
+  const [cities, setCities] = useState([]);
+  const [city, setCity] = useState("");
+  let [provinceId, setProvinceId] = useState(0);
+
+  const getDataProvinces = async () => {
+    try {
+      const url = "daerahindonesia/provinsi";
+      const response = await api.get(url);
+      const payload = [...response?.data?.provinsi];
+      setProvinces(payload);
+      console.log("Ini Data Provinsi ", provinces);
+    } catch (error) {
+      alert(error.message);
+      console.log(error);
+    }
+  };
+
+  const getDataCities = async () => {
+    try {
+      let url = `daerahindonesia/kota?id_provinsi=${provinceId}`;
+      const response = await api.get(url);
+      const payload = [...response?.data?.kota_kabupaten];
+      setCities(payload);
+      console.log("Ini Data Kota ", cities);
+      console.log("Ini url kota ", url);
+    } catch (error) {
+      alert(error.message);
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getDataCities();
+    console.log("Ini City" + city);
+    console.log("Ini ProvinceId" + provinceId);
+    getDataProvinces();
+  }, [provinceId, city]);
+
   return (
     <>
       <div className="container-md">
@@ -72,8 +114,14 @@ const Setting = () => {
                             name="province"
                             id="province"
                             className="form-control"
+                            value={provinceId}
+                            onChange={(e) => setProvinceId(e.target.value)}
                           >
-                            <option value="Banten">Banten</option>
+                            {provinces.map((item) => (
+                              <option value={item.id} key={item.id} selected>
+                                {item.nama}
+                              </option>
+                            ))}
                           </select>
                         </div>
                       </div>
@@ -84,10 +132,14 @@ const Setting = () => {
                             name="cities"
                             id="cities"
                             className="form-control"
+                            value={city}
+                            onChange={(e) => setCity(e.target.value)}
                           >
-                            <option value="Tangerang City">
-                              Tangerang City
-                            </option>
+                            {cities.map((item) => (
+                              <option value={item?.id} key={item?.id} selected>
+                                {item.nama}
+                              </option>
+                            ))}
                           </select>
                         </div>
                       </div>

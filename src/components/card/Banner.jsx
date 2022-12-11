@@ -1,5 +1,5 @@
 import React from "react";
-import Promo from "../../assets/3.png";
+
 import card from "../../assets/logo/card.png";
 import card1 from "../../assets/logo/card2.png";
 import card2 from "../../assets/logo/card3.png";

@@ -1,8 +1,21 @@
 import React from "react";
+import { useState } from "react";
+import api from "../../services/api";
 
 const Invoice = () => {
+  const [invoice, setInvoice] = useState([]);
+
+  const getDataInvoice = async () => {
+    const url = "api/v1/loops/history";
+    const response = await api.get(url);
+    const payload = [...response?.data];
+    setInvoice(payload);
+    console.log("ini Data Invoice ", invoice);
+  };
+
   return (
     <>
+      
       <div className="container-lg py-10 h-screen bg-utama px-2 font-[poppins]">
         <div className="max-w-md mx-auto rounded-lg overflow-hidden md:max-w-xl">
           <div className="md:flex">

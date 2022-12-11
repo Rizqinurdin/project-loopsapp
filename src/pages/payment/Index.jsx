@@ -1,23 +1,9 @@
 import React from "react";
 import Navigation from "../../components/header/Navigation";
 import Hero from "../../components/hero/Hero";
-import Banner4 from "../../assets/11.png";
-import Sale from "../../assets/sale.svg";
-import Sale1 from "../../assets/sale1.svg";
-import Sale2 from "../../assets/sale20.png";
-import Sale3 from "../../assets/sale50.png";
-import Promo from "../../assets/icon1.png";
-import Pay from "../../assets/icon2.png";
-import History from "../../assets/icon3.png";
 import bpjs from "./../../assets/logo/bpjs1.png";
-import LogoPLN from "../../assets/logopln.png";
-import LogoPDM from "../../assets/logopdam.png";
-import XL from "../../assets/xl1.png";
-import Indihome from "../../assets/indihome.png";
-import Tsel from "../../assets/tsel.png";
 import listrik from "./../../assets/logo/listrik.png";
 import pdam from "./../../assets/logo/pdam1.png";
-
 import { Carousel } from "antd";
 import { Form, Button } from "react-bootstrap";
 

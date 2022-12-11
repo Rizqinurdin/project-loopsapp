@@ -14,7 +14,9 @@ import Register from "./components/register/index"
 import Login from "./components/login/index"
 import Setting from "./pages/setting/Setting";
 import CardHistory from "./components/card-history";
+
 import { Bill, PaymentBill } from "./components";
+
 
 function App(){
   return (
@@ -35,6 +37,8 @@ function App(){
         <Route path="/ch" element={<CardHistory/>}/>
         <Route path="/bill" element={<Bill/>}/>
         <Route path="/pay" element={<PaymentBill/>}/>
+     
+
       </Routes>
     </BrowserRouter>
    </>
