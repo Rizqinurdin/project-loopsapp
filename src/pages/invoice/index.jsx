@@ -17,7 +17,7 @@ const Invoice = () => {
               <div className='p-3 space-y-5'>
                         <div className='flex flex-col'> <span className='text-gray'>Company</span> <span className='text-black text-lg font-bold'>Disoft</span> </div>
                         <div className='flex flex-col'> <span className='text-gray'>Base Price #</span> <span className='text-black text-lg font-bold'>1000</span> </div>
-                        <div className='flex flex-col'> <span className='text-gray'>Discount #</span> <span className='text-black text-lg font-bold'>50%</span> </div>
+                        <div className='flex flex-col'> <span className='text-gray'>Promo #</span> <span className='text-black text-lg font-bold'>50%</span> </div>
                         <div className='flex flex-col'> <span className='text-gray'>Order #</span> <span className='text-black text-lg font-bold'>DS1234343</span> </div>
                         {/* <div className='flex flex-col'> <span className='text-gray'>Service</span> <span className='text-black text-lg font-bold'>New Document</span> </div> */}
                         <div className='flex flex-col'> <span className='text-gray'>Date #</span> <span className='text-black text-lg font-bold'>08:50/11/18/2022</span> </div>
