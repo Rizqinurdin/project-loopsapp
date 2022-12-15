@@ -117,7 +117,7 @@ const Setting = () => {
                             value={provinceId}
                             onChange={(e) => setProvinceId(e.target.value)}
                           >
-                            {provinces.map((item) => (
+                            {provinces.map((item) => (  
                               <option value={item.id} key={item.id} selected>
                                 {item.nama}
                               </option>

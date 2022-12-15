@@ -18,12 +18,14 @@ const Banner = () => {
               <div className="p-3">
                 <a href="#">
                   <h5 className="mb-2 text-ratio-1x1 font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2021
+                    Promo 25 % untuk pembayara BPJS via LoopApp
                   </h5>
                 </a>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
+                  Bayar BPJS Kesehatan jangan tunggu sakit! Sekarang bisa lebih
+                  mudah dan cepat pakai aplikasi Loops. Bayar tagihan BPJSmu
+                  sekarang dengan promo bayar BPJS dari aplikasi loops dan
+                  dapatkan discount 25%!
                 </p>
                 <a
                   href="/details"
@@ -55,15 +57,17 @@ const Banner = () => {
               <div className="p-3">
                 <a href="#">
                   <h5 className="mb-2 text-ratio-1x1 font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2021
+                    Promo discount topup 10% setiap transaksi Topup 100.000
                   </h5>
                 </a>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
+                  Ada kabar gembira untuk Loopers! kali ini aplikasi Loops
+                  kembali menghadirkan promo discount sebanyak 10% bagi para
+                  pelanggan setianya yang melakukan transaksi Topup di aplikasi
+                  loops ini.
                 </p>
                 <a
-                  href="#"
+                  href="/detail-pdam"
                   className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Read more
@@ -92,15 +96,17 @@ const Banner = () => {
               <div className="p-3">
                 <a href="#">
                   <h5 className="mb-2 text-ratio-1x1 font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2021
+                    Promo Mega Discount up to 50%
                   </h5>
                 </a>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
+                  Bayar PDAM Sekarang bisa lebih mudah dan cepat pakai aplikasi
+                  Loops. Bayar tagihan PDAM sekarang dengan promo bayar PDAM
+                  dari aplikasi loops dan dapatkan discount 50% off syarat dan
+                  ketentuan berlaku.
                 </p>
                 <a
-                  href="#"
+                  href="/detail-pln"
                   className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Read more

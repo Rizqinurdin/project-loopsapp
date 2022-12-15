@@ -112,7 +112,7 @@ const Home = () => {
                         </a>
                         <a href="/setting">
                           <img className="w-12 mx-2" src={Setting} alt="" />
-                          <p className="text-xs mt-2 text-center">Setting</p>
+                          <p className="text-xs mt-2 text-center">Account</p>
                         </a>
                       </div>
                     </div>

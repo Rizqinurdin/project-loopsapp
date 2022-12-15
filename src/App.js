@@ -4,6 +4,8 @@ import Navigation from "./components/header/Navigation";
 import Promo from "./components/promo/Promo";
 import Banner from "./components/card/Banner";
 import Details from "./pages/details-promo";
+import DetailsPDAM from "./pages/details-promo/pdam";
+import DetailsPLN from "./pages/details-promo/pln";
 import Home from "./pages/home/Home";
 import Topup from "./components/topup/topup";
 import Index from "./pages/landingpage/Index";
@@ -27,6 +29,8 @@ function App(){
         <Route path="home" element={<Home />} />
         <Route path="promo" element={<Promo />} />
         <Route path="/details" element={<Details />} />
+        <Route path="/detail-pdam" element={<DetailsPDAM />} />
+        <Route path="/detail-pln" element={<DetailsPLN/>}/>
         <Route path="/topup" element={<Topup />} />
         <Route path="/history" element={<History />} />
         <Route path="/payment" element={<Payment/>}/>
@@ -37,8 +41,6 @@ function App(){
         <Route path="/ch" element={<CardHistory/>}/>
         <Route path="/bill" element={<Bill/>}/>
         <Route path="/pay" element={<PaymentBill/>}/>
-     
-
       </Routes>
     </BrowserRouter>
    </>

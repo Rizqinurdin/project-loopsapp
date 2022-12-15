@@ -1,6 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
 import Select from "react-select";
 import Navigation from "../header/Navigation";
+import api from "../../services/api";
 
 const bank = [
   { value: "BCA", label: "BCA" },
@@ -9,17 +11,34 @@ const bank = [
   { value: "MANDIRI", label: "MANDIRI" },
 ];
 
+const merchant = [
+  { value: "Indomaret", label: "Indomaret" },
+  { value: "Alfamart", label: "Alfamart" },
+  { value: "LoopApp", label: "LoopApp" },
+];
+
 const nominal = [
-  { value: "20000", label: "20000" },
-  { value: "30000", label: "30000" },
-  { value: "50000", label: "50000" },
   { value: "100000", label: "100000" },
-  { value: "150000", label: "150000" },
   { value: "200000", label: "200000" },
+  { value: "300000", label: "300000" },
   { value: "400000", label: "400000" },
+  { value: "500000", label: "500000" },
 ];
 
 function Topup() {
+  const [topup, setTopup] = useState([]);
+  const getDataTopup = async () => {
+    try {
+      const url = "/api/topup";
+      const response = await api.get(url);
+      const payload = [...response?.data];
+      console.log("Ini data Topup ", topup);
+    } catch (error) {
+      alert(error.message);
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <Navigation></Navigation>
@@ -36,7 +55,11 @@ function Topup() {
               <br />
 
               <div className="mb-3">
-                <Select options={bank} placeholder="Top Up With" />
+                <Select options={bank} placeholder="Top Up Transfer ATM" />
+              </div>
+
+              <div className="mb-3">
+                <Select options={merchant} placeholder="Top Up at Merchant" />
               </div>
 
               <div className="mb-3">
@@ -47,6 +70,7 @@ function Topup() {
                 <button
                   type="submit"
                   className="btn hover:bg-green-400 bg-green-500 text-white font-[poppins]"
+                  value={topup.map((item) => onclick)}
                 >
                   Top Up
                 </button>

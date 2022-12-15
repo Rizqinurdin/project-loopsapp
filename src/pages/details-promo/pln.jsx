@@ -8,39 +8,42 @@ const Details = () => {
       <div className="container-lg mt-24">
         <Navigation />
         <h1 className="text-center text-3xl font-bold font-[poppins]">
-          Promo ini berlaku untuk pembayaran BPJS Kesehatan <br /> pada aplikasi
-          Loops dengan ketentuan sebagai berikut:
+          Bayar PDAM Sekarang bisa lebih mudah dan cepat <br /> pakai aplikasi
+          Loops.
         </h1>
         <img src={hero3} class="img-fluid mx-auto mt-4 w-auto" alt="..." />
 
         <h1 className="mt-5 font-bold">Syarat dan Ketentuan</h1>
         <div className="container mt-2">
           <p className="col-md-8">
-            1. Promo berupa potongan harga sebanyak 25% jumlah yang harus
-            dibayarkan pengguna di potong sebanyak 25% dari jumlah yang
-            seharusnya dibayarkan.
+            1.Promo ini berlaku untuk pembayaran PDAM pada aplikasi Loops dengan
+            ketentuan sebagai berikut: •Promo berupa potongan harga sebanyak 50%
+            jumlah yang harus dibayarkan pengguna di potong sebanyak 50% dari
+            jumlah yang seharusnya dibayarkan. 
+      
           </p>
           <p className="col-md-8">
-            2. Periode 1 – 31 Desember 2022, Pelanggan akan mendapatkan discount
-            atau potongan harga sebesar 25% selama periode promo berlaku hingga
-            10x Transaksi/ Pelanggan/ Periode
+          2.Periode 1 – 31 Desember 2022,
+            Pelanggan akan mendapatkan discount atau potongan harga sebesar 50%
+            selama periode promo berlaku hingga 10x transaksi/ Pelanggan/
+            Periode.
           </p>
           <p className="col-md-8">
-            3. Kuota Promo terbatas setiap harinya selama periode promo
+          3.Kuota Promo terbatas setiap harinya selama periode promo.
           </p>
           <p className="col-md-8">
-            4. Loops dapat menggugurkan hak pengguna apabila ditemukan tindakan
+          4.Loops dapat menggugurkan hak pengguna apabila ditemukan tindakan
             yang dianggap oleh Loops sebagai penyalahgunaan, kecurangan dan atau
-            transaksi mencurigakan lainnya
+            transaksi mencurigakan lainnya 
           </p>
           <p className="col-md-8">
-            5. Promo dapat berubah atau berhenti sewaktu-waktu sesuai dengan
-            kebijakan perusahaan, yang akan diinfokan terlebih dahulu melalui
-            website www.loops.com
+          5.Promo dapat berubah atau berhenti
+            sewaktu-waktu sesuai dengan kebijakan perusahaan, yang akan
+            diinfokan terlebih dahulu melalui website www.loops.com
           </p>
           <p className="col-md-8">
-            6. Promo ini akan hangus pada tanggal 31 Desember 2022, pukul 23:59
-            WIB.
+          6.Promo ini
+            akan hangus pada tanggal 31 Desember 2022, pukul 23:59 WIB..
           </p>
         </div>
         <div className="mt-3">
