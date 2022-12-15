@@ -2,14 +2,10 @@ import React from "react";
 import { Carousel } from "antd";
 import Navigation from "../../components/header/Navigation";
 import { Card, Button } from "react-bootstrap";
-import { Container } from "react-bootstrap";
-import Promo from "../../assets/icon1.png";
-import Pay from "../../assets/icon2.png";
-import History from "../../assets/icon3.png";
-import Banner1 from "../../assets/3.png";
-import Banner2 from "../../assets/2.png";
-import Banner3 from "../../assets/15.png";
-import Banner4 from "../../assets/11.png";
+import Promo from "../../assets/logo/icon1.png";
+import Pay from "../../assets/logo/icon2.png";
+import History from "../../assets/logo/icon3.png";
+import Setting from "../../assets/logo/settings.png";
 import { useNavigate } from "react-router-dom";
 
 const contentStyle: React.CSSProperties = {
@@ -24,13 +20,13 @@ const Home = () => {
   const Navigate = useNavigate();
   return (
     <>
-      <Navigation></Navigation>
-      <div className="container mt-24">
-        <h1 className="text-1xl font-bold font-[poppins]">
-          Welcome Back Muhammad Farizqi Nurdin
-        </h1>
+      <div className="container-lg">
+        <Navigation></Navigation>
+        <div className="container mt-24">
+          <h1 className="text-1xl font-bold font-[poppins]">
+            Welcome Back Muhammad Farizqi Nurdin
+          </h1>
 
-        <Container>
           <div className="row">
             <div className="col-md-4">
               <Card className="bg-slate-100 mt-3" style={{ width: "20rem" }}>
@@ -97,26 +93,26 @@ const Home = () => {
                 className="bg-slate-100 mt-5 ml-80 h-2/4"
                 style={{ width: "20rem" }}
               >
-                <Card className="#">
+                <Card className="md:w-80">
                   <Card.Header>
                     Shortcut
                     <div className="row">
                       <div className="col-md-4 flex mt-3 w-full justify-center">
-                        <a href="#">
+                        <a href="/promo">
                           <img className="w-12 mx-2" src={Promo} alt="" />
                           <p className="text-xs mt-2 text-center">Promo</p>
                         </a>
-                        <a href="#">
+                        <a href="/payment">
                           <img className="w-12 mx-2" src={History} alt="" />
                           <p className="text-xs mt-2 text-center">Bills</p>
                         </a>
-                        <a href="#">
+                        <a href="/history">
                           <img className="w-12 mx-2" src={Pay} alt="" />
                           <p className="text-xs mt-2 text-center">History</p>
                         </a>
-                        <a href="#">
-                          <img className="w-12 mx-2" src={Promo} alt="" />
-                          <p className="text-xs mt-2 text-center">Setting</p>
+                        <a href="/setting">
+                          <img className="w-12 mx-2" src={Setting} alt="" />
+                          <p className="text-xs mt-2 text-center">Account</p>
                         </a>
                       </div>
                     </div>
@@ -136,10 +132,8 @@ const Home = () => {
               </Card>
             </div>
           </div>
-        </Container>
-      </div>
-      <footer>
-        <div className="container">
+        </div>
+        <footer>
           <div className="row">
             <div className="col-12 text-center pt-1 pb-1 my-3">
               <p className="text-green-500 fw-bold">
@@ -148,8 +142,8 @@ const Home = () => {
               </p>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </>
   );
 };

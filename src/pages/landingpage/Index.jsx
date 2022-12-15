@@ -8,116 +8,87 @@ import {
   Card,
   Figure,
 } from "react-bootstrap";
-import logo from "./../../assets/logo.svg";
-import user from "./../../assets/user.svg";
-import hero1 from "./../../assets/11.png";
-import hero2 from "./../../assets/10.png";
-import hero3 from "./../../assets/9.png";
-import Promo from "../../assets/icon1.png";
-import Pay from "../../assets/icon2.png";
-import History from "../../assets/icon3.png";
-import Working from "../../assets/workingspace.png";
-import Keamanan from "./../../assets/kemanan.png";
-import Sistem from "./../../assets/layanan.png";
-import Layanan from "./../../assets/sistem.png";
-import PLN from "./../../assets/Logo_PLN.png";
-import BPJS from "./../../assets/bpjs.png";
-import MyRep from "./../../assets/myrep.png";
-import PDAM from "./../../assets/pdam.png";
-import BNI from "./../../assets/bni.png";
-import BCA from "./../../assets/bca.png";
-import mandiri from "./../../assets/mandiri.png";
-import User1 from "./../../assets/user.svg";
+import logo from "./../../assets/logo/logo.svg";
+import user from "./../../assets/logo/user.svg";
+import History from "../../assets/logo/icon3.png";
+import Working from "../../assets/logo/workingspace.png";
+import Keamanan from "./../../assets/logo/kemanan.png";
+import Sistem from "./../../assets/logo/layanan.png";
+import Layanan from "./../../assets/logo/sistem.png";
+import Hero from "../../components/hero/Hero";
+import listrik from "./../../assets/logo/listrik.png";
+import bpjs from "./../../assets/logo/bpjs1.png";
+import pdam from "./../../assets/logo/pdam1.png";
+import bni from "./../../assets/logo/bni1.png";
+import bca from "./../../assets/logo/bca1.png";
 
 const Index = () => {
   return (
-    <>
+    <div className="container-lg">
       <Navbar
         bg="light"
         variant="light"
-        className="navbar navbar-expand-lg navbar-light bg-light navbar-store fixed-top navbar fixed-top"
+        className="navbar navbar-expand-lg navbar-light bg-light navbar-store fixed-top navbar fixed-top container-lg"
       >
-        <Container>
+        <div className="container">
           <img className="w-20" src={logo} alt="logo" />
           <Nav className="mr-5 font-[poppins]">
-            <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#">Payment</Nav.Link>
-            <Nav.Link href="#">Promo</Nav.Link>
-            <Nav.Link href="#">History</Nav.Link>
-            <Nav.Link href="#">Sign in</Nav.Link>
+            <Nav.Link href="/login">Home</Nav.Link>
+            <Nav.Link href="/login">Payment</Nav.Link>
+            <Nav.Link href="/login">Promo</Nav.Link>
+            <Nav.Link href="/login">History</Nav.Link>
             <a
-              href="#"
+              href="/login"
+              className="inline-flex items-center mr-1 px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+            >
+              Sign In
+            </a>
+
+            <a
+              href="/register"
               className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
             >
               Sign up
             </a>
           </Nav>
-        </Container>
+        </div>
       </Navbar>
+      <Hero></Hero>
 
-      <Container className="mt-5">
-        <Carousel fade>
-          <Carousel.Item>
-            <img className="d-block w-100" src={hero1} alt="First slide" />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="d-block w-100" src={hero2} alt="Second slide" />
-
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="d-block w-100" src={hero3} alt="Third slide" />
-
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
-      </Container>
-
-      <Container>
+      <div className="container">
         <div className="row mt-5">
-          <div className="col-6">
-            <img className="w-96 ml-14" src={Working} alt="" />
+          <div className="col-md-6">
+            <img className="w-auto" src={Working} alt="" />
           </div>
-          <div className="col-5">
-            <p className="mt-2 text-3xl text-gray-600 font-bold font-[poppins]">
+          <div className="col-md-5">
+            <p className="text-3xl text-gray-600 font-bold font-[poppins] mt-2">
               Tentang Kami
             </p>
-            <p className="text-gray-500 text-2x1 text font-[poppins] mt-2">
-              Mau bayar apapun jadi semudah lewat sentuhan jari. melewati loops,
-              kamu bisa melakukan transaksi apapun dengan praktis mulai dari
-              transfer uang hingga pembayaran tagihan. ayo! segera bergabung dan
-              nikmati layanannya dengan metode yang lebih cepat, praktis, dan
-              aman. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Enim temporibus, ab vero tempore ratione voluptates similique aut
-              voluptatibus nam impedit! Alias mollitia dicta quibusdam
-              veritatis!
+            <p className="ml-5 text-gray-500 text-2x1 text font-[poppins] mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+              accusamus esse aliquid impedit perspiciatis. Reiciendis quas
+              dolores iste qui praesentium similique nulla quam, eaque sint
+              culpa eius tempore facilis at officia perferendis harum minus id
+              mollitia doloribus aliquid vitae odio ad quasi? Soluta, nostrum.
+              Impedit nobis adipisci dolore porro quaerat. Modi aliquid alias
+              vero nobis odio accusantium ipsum harum. Porro similique provident
+              dicta at aperiam beatae ducimus praesentium vel culpa, quo
+              delectus nulla ipsum pariatur iure laborum vitae quod voluptas.
             </p>
           </div>
         </div>
-      </Container>
+      </div>
 
-      <Container className="mt-4 justify-content-center">
+      <div className="mt-4 justify-content-center">
         <div className="row">
           <h1 className="text-4xl text-center uppercase font-[poppins]">
             Transaksi <span className="font-bold">Aman</span> dan{" "}
             <span className="font-bold">Nyaman</span> <br /> dengan LoopsApp
           </h1>
         </div>
-      </Container>
+      </div>
 
-      <section className="container">
+      <section>
         <div className="row mt-5 ">
           <div className="col-md-4">
             <img className="w-40 mx-auto" src={Sistem} alt="" />
@@ -152,31 +123,25 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="container">
+      <section>
         <h1 className="text-center text-3xl mt-5 font-[poppins]">
           Merchant Kami
         </h1>
-        <div className="row mt-4">
-          <div className="col-md-3">
-            <img className="w-40 ml-5" src={PLN} alt="" />
+        <div className="row mt-4 justify-content-center">
+          <div className="col-md-4 justify-justify-content-center">
+            <img className="#" src={listrik} alt="" />
           </div>
-          <div className="col-md-3 mt-3">
-            <img className="w-100" src={BPJS} alt="" />
+          <div className="col-md-4 mt-3">
+            <img className="#" src={bpjs} alt="" />
           </div>
-          <div className="col-md-3">
-            <img className="w-60" src={PDAM} alt="" />
-          </div>
-          <div className="col-md-3 mt-5">
-            <img className="w-500" src={MyRep} alt="" />
-          </div>
-          <div className="col-md-2 mt-5 ml-72">
-            <img className="w-500" src={BCA} alt="" />
+          <div className="col-md-4">
+            <img className="w-60 mt-3" src={pdam} alt="" />
           </div>
           <div className="col-md-2 mt-5">
-            <img className="w-500" src={BNI} alt="" />
+            <img className="#" src={bni} alt="" />
           </div>
           <div className="col-md-2 mt-5">
-            <img className="w-500" src={mandiri} alt="" />
+            <img className="#" src={bca} alt="" />
           </div>
         </div>
       </section>
@@ -201,16 +166,11 @@ const Index = () => {
                 width={50}
                 height={50}
                 alt="171x180"
-                src={User1}
+                src={user}
               />
             </Figure>
             <Figure>
-              <Figure.Image
-                width={100}
-                height={100}
-                alt="171x180"
-                src={User1}
-              />
+              <Figure.Image width={100} height={100} alt="171x180" src={user} />
               <Figure.Caption>
                 <h5 className="text-center font-bold text-sm font-[poppins]">
                   Rizqinurdin
@@ -224,7 +184,7 @@ const Index = () => {
                 width={50}
                 height={50}
                 alt="171x180"
-                src={User1}
+                src={user}
               />
             </Figure>
           </div>
@@ -243,7 +203,7 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 
