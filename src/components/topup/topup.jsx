@@ -1,8 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState } from "react";
+
 import Select from "react-select";
 import Navigation from "../header/Navigation";
-import api from "../../services/api";
+
 
 const bank = [
   { value: "BCA", label: "BCA" },
@@ -26,19 +26,6 @@ const nominal = [
 ];
 
 function Topup() {
-  const [topup, setTopup] = useState([]);
-  const getDataTopup = async () => {
-    try {
-      const url = "/api/topup";
-      const response = await api.get(url);
-      const payload = [...response?.data];
-      console.log("Ini data Topup ", topup);
-    } catch (error) {
-      alert(error.message);
-      console.log(error);
-    }
-  };
-
   return (
     <>
       <Navigation></Navigation>
@@ -70,7 +57,6 @@ function Topup() {
                 <button
                   type="submit"
                   className="btn hover:bg-green-400 bg-green-500 text-white font-[poppins]"
-                  value={topup.map((item) => onclick)}
                 >
                   Top Up
                 </button>

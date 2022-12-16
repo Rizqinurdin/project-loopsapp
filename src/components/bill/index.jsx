@@ -1,7 +1,6 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import Select from "react-select";
 import Navigation from "../header/Navigation";
 import { useNavigate } from "react-router-dom";
+import BPJS from "../../assets/logo/bpjs.png";
 
 function Bill() {
   const Navigate = useNavigate();
@@ -21,10 +20,7 @@ function Bill() {
               <br />
               <div className="grid grid-cols-1 justify-items-center w-full">
                 <div className=" col-span-1">
-                  <img
-                    src={require("../bill/logobpjs.png")}
-                    className=" h-36"
-                  />
+                  <img src={BPJS} className=" h-36" />
                 </div>
               </div>
 

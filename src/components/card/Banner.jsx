@@ -13,7 +13,7 @@ const Banner = () => {
           <div className="col-md-4">
             <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 mt-5 ml-20 w-4/5">
               <a href="#">
-                <img className="rounded-t-lg" src={card} alt="" />
+                <img className="rounded-t-lg" src={card} alt="spanduk" />
               </a>
               <div className="p-3">
                 <a href="#">
@@ -52,7 +52,7 @@ const Banner = () => {
           <div className="col-md-4">
             <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 mt-5 ml-10 w-4/5">
               <a href="#">
-                <img className="rounded-t-lg" src={card1} alt="" />
+                <img className="rounded-t-lg" src={card1} alt="spanduk1" />
               </a>
               <div className="p-3">
                 <a href="#">
@@ -91,7 +91,7 @@ const Banner = () => {
           <div className="col-md-4">
             <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 mt-5 w-4/5">
               <a href="#">
-                <img className="rounded-t-lg" src={card2} alt="" />
+                <img className="rounded-t-lg" src={card2} alt="spanduk3" />
               </a>
               <div className="p-3">
                 <a href="#">

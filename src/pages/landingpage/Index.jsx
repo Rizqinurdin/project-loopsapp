@@ -1,16 +1,7 @@
 import React from "react";
-import {
-  Navbar,
-  Container,
-  Nav,
-  Button,
-  Carousel,
-  Card,
-  Figure,
-} from "react-bootstrap";
+import { Navbar, Nav, Carousel, Figure } from "react-bootstrap";
 import logo from "./../../assets/logo/logo.svg";
 import user from "./../../assets/logo/user.svg";
-import History from "../../assets/logo/icon3.png";
 import Working from "../../assets/logo/workingspace.png";
 import Keamanan from "./../../assets/logo/kemanan.png";
 import Sistem from "./../../assets/logo/layanan.png";
@@ -152,10 +143,12 @@ const Index = () => {
             <h5 className="text-center text-4xl font-[poppins]">
               Testimonial Teman Loops
             </h5>
-            <h5 className="text-center mt-5 text-2x1 text-slate-400 font-[poppins]">
-              "Fitur yang sangat baik dan canggil , proses pengiriman PULSA{" "}
-              <br /> dan membayar TAGIHAN apapun menjadi lebih simple"
-            </h5>
+            <Carousel>
+              <h5 className="text-center mt-5 text-2x1 text-slate-400 font-[poppins]">
+                "Fitur yang sangat baik dan canggih , proses pengiriman PULSA{" "}
+                <br /> dan membayar TAGIHAN apapun menjadi lebih simple"
+              </h5>
+            </Carousel>
           </div>
         </div>
         <div className="row justify-content-center mt-5">
@@ -169,6 +162,7 @@ const Index = () => {
                 src={user}
               />
             </Figure>
+
             <Figure>
               <Figure.Image width={100} height={100} alt="171x180" src={user} />
               <Figure.Caption>

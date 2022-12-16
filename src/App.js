@@ -1,8 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
-import Navigation from "./components/header/Navigation";
 import Promo from "./components/promo/Promo";
-import Banner from "./components/card/Banner";
 import Details from "./pages/details-promo";
 import DetailsPDAM from "./pages/details-promo/pdam";
 import DetailsPLN from "./pages/details-promo/pln";
@@ -16,7 +14,6 @@ import Register from "./components/register/index"
 import Login from "./components/login/index"
 import Setting from "./pages/setting/Setting";
 import CardHistory from "./components/card-history";
-
 import { Bill, PaymentBill } from "./components";
 
 

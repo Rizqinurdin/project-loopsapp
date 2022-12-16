@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Select from "react-select";
 import Navigation from "../header/Navigation";
 
 function PaymentBill() {
@@ -22,6 +21,7 @@ function PaymentBill() {
                   <img
                     src={require("../bill/logobpjs.png")}
                     className=" h-36"
+                    alt="logo"
                   />
                 </div>
               </div>
