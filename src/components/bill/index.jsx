@@ -7,23 +7,20 @@ function Bill() {
   return (
     <>
       <Navigation></Navigation>
-      <div className="Payment mt-5 font-[poppins]">
+      <div className="Payment mt-2 font-[poppins]">
         <div
           style={{ display: "flex", justifyContent: "center", padding: 40.0 }}
         >
           <div
-            className="card col-12 col-lg-6 login-card mt-2 hv-center"
+            className="card col-12 col-lg-6 login-card hv-center"
             style={{ display: "flex", justifyContent: "center", padding: 40.0 }}
           >
             <form>
-              <div></div>
-              <br />
               <div className="grid grid-cols-1 justify-items-center w-full">
                 <div className=" col-span-1">
                   <img src={BPJS} className=" h-36" />
                 </div>
               </div>
-
               <div className="mb-3">
                 <label class="block">
                   <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">

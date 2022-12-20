@@ -4,50 +4,48 @@ import Hero from "../../components/hero/Hero";
 import bpjs from "./../../assets/logo/bpjs1.png";
 import listrik from "./../../assets/logo/listrik.png";
 import pdam from "./../../assets/logo/pdam1.png";
-import { Carousel } from "antd";
-import { Form, Button } from "react-bootstrap";
+import Footer from "../../components/footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
-  const onChange = (currentSlide) => {
-    console.log(currentSlide);
-  };
+  const Navigate = useNavigate();
   return (
     <>
-      <section className="container-lg">
-        <Navigation></Navigation>
+      <Navigation></Navigation>
+      <section className="container-lg mt-3">
         <Hero></Hero>
         <h1 className="text-center text-2xl mt-5 font-[poppins]">
           Payment LoopsApp
         </h1>
         <div className="row mt-4 justify-content-center">
           <div className="col-md-4 rounded-lg bg-green-200 hover:bg-green-100  m-4">
-            <a href="/bill">
-              <img className="ml-auto mr-auto" src={bpjs} alt="" />
-            </a>
+            <img
+              className="ml-auto mr-auto"
+              src={bpjs}
+              alt="1"
+              onClick={() => Navigate(`/bill`)}
+            />
           </div>
           <div className="col-md-4 rounded-lg bg-green-200 hover:bg-green-100 m-4">
-            <a href="#">
-              <img className="ml-auto mr-auto" src={listrik} alt="" />
-            </a>
+            <img
+              className="ml-auto mr-auto"
+              src={listrik}
+              alt="2"
+              onClick={() => Navigate(`/bill`)}
+            />
           </div>
           <div className="col-md-4 rounded-lg bg-green-200 hover:bg-green-100 m-4">
-            <a href="#">
-              <img className="w-60 mt-2 ml-auto mr-auto" src={pdam} alt="" />
-            </a>
+            <img
+              className="w-60 mt-2 ml-auto mr-auto"
+              src={pdam}
+              alt="3"
+              onClick={() => Navigate(`/bill`)}
+            />
           </div>
         </div>
       </section>
 
-      <footer>
-        <div className="row">
-          <div className="col-12 text-center pt-1 pb-1 my-3">
-            <p className="text-green-500 fw-bold">
-              {" "}
-              2022 Copyright LoopsApps. All Rights Reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer></Footer>
     </>
   );
 };

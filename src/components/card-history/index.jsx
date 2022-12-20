@@ -15,9 +15,11 @@ const CardHistory = () => {
             <div className=" col-span-1 row-span-2 ml-3">
               <AiFillCaretLeft />
             </div>
-            <div className=" col-span-2 row-span-1 text-left"></div>
-            <div className=" col-span-2 row-span-1 text-left">Rp0.000</div>
-            <div className=" col-span-2 row-span-2 text-right mr-3"></div>
+            <div className=" col-span-2 row-span-1 text-left">
+              Jenis Transaksi
+            </div>
+            <div className=" col-span-2 row-span-1 text-left">1000000</div>
+            <div className=" col-span-2 row-span-2 text-right mr-3">Date</div>
           </div>
         </div>
       </div>

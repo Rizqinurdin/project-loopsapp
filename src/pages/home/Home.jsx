@@ -6,7 +6,9 @@ import Promo from "../../assets/logo/icon1.png";
 import Pay from "../../assets/logo/icon2.png";
 import History from "../../assets/logo/icon3.png";
 import Setting from "../../assets/logo/settings.png";
+import User from "../../assets/logo/users.png";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../components/footer/Footer";
 
 const contentStyle: React.CSSProperties = {
   height: "300px",
@@ -20,9 +22,9 @@ const Home = () => {
   const Navigate = useNavigate();
   return (
     <>
+      <Navigation></Navigation>
       <div className="container-lg">
-        <Navigation></Navigation>
-        <div className="container mt-24">
+        <div className="container mt-5">
           <h1 className="text-1xl font-bold font-[poppins]">
             Welcome Back Muhammad Farizqi Nurdin
           </h1>
@@ -38,7 +40,7 @@ const Home = () => {
                     $100
                   </Card.Subtitle>
                   <button
-                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2"
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2"
                     onClick={() => Navigate(`/topup`)}
                   >
                     Topup
@@ -52,7 +54,7 @@ const Home = () => {
                     <h3 style={contentStyle}>
                       <img
                         src={require("./img/promo1.png")}
-                        alt=""
+                        alt="1"
                         className="carlog"
                       />
                     </h3>
@@ -61,7 +63,7 @@ const Home = () => {
                     <h3 style={contentStyle}>
                       <img
                         src={require("./img/promo2.png")}
-                        alt=""
+                        alt="2"
                         className="carlog"
                       />
                     </h3>
@@ -70,7 +72,7 @@ const Home = () => {
                     <h3 style={contentStyle}>
                       <img
                         src={require("./img/promo3.png")}
-                        alt=""
+                        alt="3"
                         className="carlog"
                       />
                     </h3>
@@ -79,7 +81,7 @@ const Home = () => {
                     <h3 style={contentStyle}>
                       <img
                         src={require("./img/promo1.png")}
-                        alt=""
+                        alt="3"
                         className="carlog"
                       />
                     </h3>
@@ -98,22 +100,46 @@ const Home = () => {
                     Shortcut
                     <div className="row">
                       <div className="col-md-4 flex mt-3 w-full justify-center">
-                        <a href="/promo">
-                          <img className="w-12 mx-2" src={Promo} alt="" />
+                        <button>
+                          {" "}
+                          <img
+                            className="w-12 mx-2"
+                            src={Promo}
+                            alt="promo"
+                            onClick={() => Navigate(`/promo`)}
+                          />
                           <p className="text-xs mt-2 text-center">Promo</p>
-                        </a>
-                        <a href="/payment">
-                          <img className="w-12 mx-2" src={History} alt="" />
+                        </button>
+                        <button>
+                          {" "}
+                          <img
+                            className="w-12 mx-2"
+                            src={History}
+                            alt="payment"
+                            onClick={() => Navigate(`/payment`)}
+                          />
                           <p className="text-xs mt-2 text-center">Bills</p>
-                        </a>
-                        <a href="/history">
-                          <img className="w-12 mx-2" src={Pay} alt="" />
+                        </button>
+                        <button>
+                          {" "}
+                          <img
+                            className="w-12 mx-2"
+                            src={Pay}
+                            alt="history"
+                            onClick={() => Navigate(`/history`)}
+                          />
                           <p className="text-xs mt-2 text-center">History</p>
-                        </a>
-                        <a href="/setting">
-                          <img className="w-12 mx-2" src={Setting} alt="" />
+                        </button>
+                        <button>
+                          {" "}
+                          <img
+                            className="w-12 mx-2"
+                            src={User}
+                            alt="account"
+                            onClick={() => Navigate(`/setting`)}
+                          />
                           <p className="text-xs mt-2 text-center">Account</p>
-                        </a>
+                        </button>
                       </div>
                     </div>
                     <Card.Header className="mt-3">
@@ -123,9 +149,6 @@ const Home = () => {
                         elit. Odio eveniet mollitia provident deserunt iure
                         earum maxime. Quia quam iure culpa?
                       </p>
-                      <a className="text-xs font-[poppins] " href="#">
-                        Show All
-                      </a>
                     </Card.Header>
                   </Card.Header>
                 </Card>
@@ -133,16 +156,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <footer>
-          <div className="row">
-            <div className="col-12 text-center pt-1 pb-1 my-3">
-              <p className="text-green-500 fw-bold">
-                {" "}
-                2022 Copyright LoopsApps. All Rights Reserved.
-              </p>
-            </div>
-          </div>
-        </footer>
+        <Footer></Footer>
       </div>
     </>
   );

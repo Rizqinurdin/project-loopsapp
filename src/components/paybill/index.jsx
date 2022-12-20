@@ -1,11 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useNavigate } from "react-router-dom";
 import Navigation from "../header/Navigation";
 
 function PaymentBill() {
+  const Navigate = useNavigate();
   return (
     <>
       <Navigation></Navigation>
-      <div className="Payment mt-5">
+      <div className="Payment mt-2">
         <div
           style={{ display: "flex", justifyContent: "center", padding: 40.0 }}
         >
@@ -40,6 +42,7 @@ function PaymentBill() {
                 <button
                   type="submit"
                   className="btn hover:bg-kedua bg-utama text-white text-xl ring-2 ring-kedua hover:ring-utama"
+                  onClick={() => Navigate(`/invoice`)}
                 >
                   Pay
                 </button>

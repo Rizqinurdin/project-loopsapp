@@ -1,89 +1,119 @@
 import React from "react";
-import { Navbar, Nav, Carousel, Figure } from "react-bootstrap";
-import logo from "./../../assets/logo/logo.svg";
-import user from "./../../assets/logo/user.svg";
-import Working from "../../assets/logo/workingspace.png";
+import Footer from "../../components/footer/Footer";
+import gambar from "../../assets/logo/123.svg";
+import Working from "../../assets/logo/0101.svg";
+import "../../assets/styleLanding.css";
 import Keamanan from "./../../assets/logo/kemanan.png";
 import Sistem from "./../../assets/logo/layanan.png";
 import Layanan from "./../../assets/logo/sistem.png";
-import Hero from "../../components/hero/Hero";
 import listrik from "./../../assets/logo/listrik.png";
 import bpjs from "./../../assets/logo/bpjs1.png";
 import pdam from "./../../assets/logo/pdam1.png";
 import bni from "./../../assets/logo/bni1.png";
 import bca from "./../../assets/logo/bca1.png";
+import logo from "./../../assets/logo/logo.svg";
+import { AiFillCloseCircle } from "react-icons/ai";
+import { TbGridDots } from "react-icons/tb";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+  const [active, setActive] = useState("navBar");
+  const showNav = () => {
+    setActive("navBar activeNavbar");
+  };
+  const removeNavbar = () => {
+    setActive("navBar");
+  };
+  const Navigate = useNavigate();
+
   return (
-    <div className="container-lg">
-      <Navbar
-        bg="light"
-        variant="light"
-        className="navbar navbar-expand-lg navbar-light bg-light navbar-store fixed-top navbar fixed-top container-lg"
-      >
-        <div className="container">
-          <img className="w-20" src={logo} alt="logo" />
-          <Nav className="mr-5 font-[poppins]">
-            <Nav.Link href="/login">Home</Nav.Link>
-            <Nav.Link href="/login">Payment</Nav.Link>
-            <Nav.Link href="/login">Promo</Nav.Link>
-            <Nav.Link href="/login">History</Nav.Link>
-            <a
-              href="/login"
-              className="inline-flex items-center mr-1 px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-            >
-              Sign In
-            </a>
-
-            <a
-              href="/register"
-              className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-            >
-              Sign up
-            </a>
-          </Nav>
-        </div>
-      </Navbar>
-      <Hero></Hero>
-
-      <div className="container">
-        <div className="row mt-5">
-          <div className="col-md-6">
-            <img className="w-auto" src={Working} alt="" />
+    <>
+      <section className="navBarSection h-20">
+        <header className="header flex">
+          <div className="logoDiv">
+            <img className="w-20 ml-10" src={logo} alt="logo" />
           </div>
-          <div className="col-md-5">
-            <p className="text-3xl text-gray-600 font-bold font-[poppins] mt-2">
-              Tentang Kami
-            </p>
-            <p className="ml-5 text-gray-500 text-2x1 text font-[poppins] mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-              accusamus esse aliquid impedit perspiciatis. Reiciendis quas
-              dolores iste qui praesentium similique nulla quam, eaque sint
-              culpa eius tempore facilis at officia perferendis harum minus id
-              mollitia doloribus aliquid vitae odio ad quasi? Soluta, nostrum.
-              Impedit nobis adipisci dolore porro quaerat. Modi aliquid alias
-              vero nobis odio accusantium ipsum harum. Porro similique provident
-              dicta at aperiam beatae ducimus praesentium vel culpa, quo
-              delectus nulla ipsum pariatur iure laborum vitae quod voluptas.
-            </p>
+          <div className={active}>
+            <ul className="navLists flex">
+              <li className="navItem">
+                <button className="btn" onClick={() => Navigate(`/login`)}>
+                  Sign In
+                </button>
+              </li>
+              <li className="navItem">
+                <button
+                  className="btn bg-success text-white"
+                  onClick={() => Navigate(`/register`)}
+                >
+                  Sign Up Free
+                </button>
+              </li>
+            </ul>
+            <div onClick={removeNavbar} className="closeNavbar">
+              <AiFillCloseCircle className="icon" />
+            </div>
+          </div>
+          <div onClick={showNav} className="toogleNavbar">
+            <TbGridDots className="icon" />
+          </div>
+        </header>
+      </section>
+      <section className="landingPage w-full relative flex items-center justify-center m-auto">
+        <img
+          className="absolute mt-5 object-cover"
+          src={gambar}
+          alt="landingGambar"
+        ></img>
+        <div className="homeContent mt-10">
+          <div className="textDiv">
+            <button
+              className="btn bg-success mt-5 ml-10"
+              onClick={() => Navigate(`/login`)}
+            >
+              <p className="text-white">Promo Special for You</p>
+            </button>
           </div>
         </div>
-      </div>
-
-      <div className="mt-4 justify-content-center">
-        <div className="row">
-          <h1 className="text-4xl text-center uppercase font-[poppins]">
-            Transaksi <span className="font-bold">Aman</span> dan{" "}
-            <span className="font-bold">Nyaman</span> <br /> dengan LoopsApp
-          </h1>
+      </section>
+      <br />
+      <div data-aos="fade-up" className="row landingImage">
+        <div className="col-md-6">
+          <img className="w-full h-96 mt-5" src={Working} alt="working" />
+        </div>
+        <div className="col-md-5 mt-5">
+          <h1 className="mt-4 text-3xl font-bold">Tentang Kami</h1> <br />
+          <span className="text-base font-thin leading-3">
+            {" "}
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Voluptatum, doloribus enim sequi, voluptas cupiditate, adipisci quam
+            saepe repellendus assumenda inventore aliquam rem consequatur
+            similique beatae iste minima! Labore ipsum quis, id enim ea
+            voluptatem totam dicta autem, delectus veniam adipisci perferendis
+            sed eligendi. Cum architecto voluptas, provident saepe sunt facilis
+            sapiente ducimus explicabo velit laboriosam soluta laborum
+            reprehenderit, non minima. Quidem ea unde, quisquam deleniti commodi
+            nam eum hic illo!
+          </span>
         </div>
       </div>
-
-      <section>
+      <div data-aos="fade-up" className="mt-20 justify-content-center">
+        <h1 className="text-4xl text-center uppercase font-[poppins]">
+          Transaksi <span className="font-bold">Aman</span> dan{" "}
+          <span className="font-bold">Nyaman</span> <br /> dengan LoopsApp
+        </h1>
+      </div>
+      <section data-aos="fade-up" className="container-lg">
         <div className="row mt-5 ">
           <div className="col-md-4">
-            <img className="w-40 mx-auto" src={Sistem} alt="" />
-            <h1 className=" text-center mt-4 font-[poppins] text-2xl font-bold">
+            <img className="w-40 mx-auto mt-2" src={Sistem} alt="layanan" />
+            <h1 className="text-center mt-4 text-2xl font-bold">
               Layanan Terlengkap
             </h1>
             <p className="mt-3 text-md text-gray-500 font-[poppins] text-center">
@@ -92,7 +122,7 @@ const Index = () => {
             </p>
           </div>
           <div className="col-md-4">
-            <img className="w-40 mx-auto" src={Keamanan} alt="" />
+            <img className="w-40 mt-2 mx-auto" src={Keamanan} alt="keamanan" />
             <h1 className=" text-center mt-4 font-[poppins] text-2xl font-bold">
               Keamanan Terjamin
             </h1>
@@ -102,7 +132,7 @@ const Index = () => {
             </p>
           </div>
           <div className="col-md-4">
-            <img className="w-40 mx-auto" src={Layanan} alt="" />
+            <img className="w-40 mx-auto mt-2" src={Layanan} alt="sistem" />
             <h1 className=" text-center mt-4 font-[poppins] text-2xl font-bold">
               Sistem Tercanggih
             </h1>
@@ -113,91 +143,30 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      <section>
-        <h1 className="text-center text-3xl mt-5 font-[poppins]">
-          Merchant Kami
+      <section data-aos="fade-up" className="container-lg">
+        <h1 className="text-center text-3xl font-bold mt-5 font-[poppins]">
+          Partner Kami
         </h1>
         <div className="row mt-4 justify-content-center">
           <div className="col-md-4 justify-justify-content-center">
-            <img className="#" src={listrik} alt="" />
+            <img className="#" src={listrik} alt="listrik" />
           </div>
           <div className="col-md-4 mt-3">
-            <img className="#" src={bpjs} alt="" />
+            <img className="#" src={bpjs} alt="bpjs" />
           </div>
           <div className="col-md-4">
-            <img className="w-60 mt-3" src={pdam} alt="" />
+            <img className="w-60 ml-10 mt-3" src={pdam} alt="pdam" />
           </div>
           <div className="col-md-2 mt-5">
-            <img className="#" src={bni} alt="" />
+            <img className="#" src={bni} alt="bni" />
           </div>
           <div className="col-md-2 mt-5">
-            <img className="#" src={bca} alt="" />
+            <img className="#" src={bca} alt="bca" />
           </div>
         </div>
       </section>
-
-      <section className="testimonial">
-        <div className="row justify-content-center mt-5">
-          <div className="col-8">
-            <h5 className="text-center text-4xl font-[poppins]">
-              Testimonial Teman Loops
-            </h5>
-            <Carousel>
-              <h5 className="text-center mt-5 text-2x1 text-slate-400 font-[poppins]">
-                "Fitur yang sangat baik dan canggih , proses pengiriman PULSA{" "}
-                <br /> dan membayar TAGIHAN apapun menjadi lebih simple"
-              </h5>
-            </Carousel>
-          </div>
-        </div>
-        <div className="row justify-content-center mt-5">
-          <div className="col-6 d-flex justify-content-center">
-            <Figure>
-              <Figure.Image
-                className="mr-2 mt-4 opacity-50"
-                width={50}
-                height={50}
-                alt="171x180"
-                src={user}
-              />
-            </Figure>
-
-            <Figure>
-              <Figure.Image width={100} height={100} alt="171x180" src={user} />
-              <Figure.Caption>
-                <h5 className="text-center font-bold text-sm font-[poppins]">
-                  Rizqinurdin
-                </h5>
-                <p className="text-center text-xs font-[poppins]">Dokter</p>
-              </Figure.Caption>
-            </Figure>
-            <Figure>
-              <Figure.Image
-                className="ml-2 mt-4 opacity-50"
-                width={50}
-                height={50}
-                alt="171x180"
-                src={user}
-              />
-            </Figure>
-          </div>
-        </div>
-      </section>
-
-      <footer>
-        <div className="container">
-          <div className="row">
-            <div className="col-12 text-center pt-1 pb-1 my-3">
-              <p className="text-green-500 fw-bold">
-                {" "}
-                2022 Copyright LoopsApps. All Rights Reserved.
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <Footer></Footer>
+    </>
   );
 };
 

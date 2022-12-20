@@ -7,8 +7,8 @@ import hero3 from "./../../assets/logo/holiday.png";
 const Hero = () => {
   return (
     <>
-      <div className="container-lg mt-5">
-        <Carousel fade>
+      <div>
+        <Carousel>
           <Carousel.Item>
             <img className="d-block w-100" src={hero1} alt="First slide" />
           </Carousel.Item>

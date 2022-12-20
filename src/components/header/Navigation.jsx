@@ -1,36 +1,83 @@
 import React from "react";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import "../../assets/styleHeader.css";
+import { MdPayments } from "react-icons/md";
+import { AiFillCloseCircle } from "react-icons/ai";
+import { TbGridDots } from "react-icons/tb";
 import logo from "./../../assets/logo/logo.svg";
 import user from "./../../assets/logo/user.svg";
+import { useState } from "react";
+import { DownOutlined, SmileOutlined } from "@ant-design/icons";
+import { Dropdown, Space, Button } from "antd";
 
 const Navigation = () => {
+  const [active, setActive] = useState("navBar");
+  const showNav = () => {
+    setActive("navBar activeNavbar");
+  };
+  const removeNavbar = () => {
+    setActive("navBar");
+  };
+  const items = [
+    {
+      key: "1",
+      label: (
+        <a target="_blank" rel="noopener noreferrer" href="/setting">
+          My Account
+        </a>
+      ),
+    },
+  ];
   return (
     <>
-      <div>
-        <Navbar
-          bg="light"
-          variant="light"
-          className="navbar navbar-expand-lg navbar-light bg-light navbar-store fixed-top navbar container-lg"
-        >
-          <img className="w-20" src={logo} alt="logo" />
-          <Nav className="ms-auto font-[poppins]">
-            <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/payment">Payment</Nav.Link>
-            <Nav.Link href="/promo">Promo</Nav.Link>
-            <Nav.Link href="/history">History</Nav.Link>
-            <Nav.Link href="#"></Nav.Link>
-            <NavDropdown
-              title="Hi Muhammad Farizqi Nurdin"
-              id="navbarScrollingDropdown"
-            >
-              <NavDropdown.Item href="/setting">Setting</NavDropdown.Item>
-              <NavDropdown.Item href="/home">Logout</NavDropdown.Item>
-            </NavDropdown>
+      <section className="navBarSection h-20">
+        <header className="header flex">
+          <div className="logoDiv">
+            <img className="w-20 ml-10" src={logo} alt="logo" />
+          </div>
+          <div className={active}>
+            <ul className="navLists flex">
+              <li className="navItem">
+                <a href="#" className="navLink">
+                  Beranda
+                </a>
+              </li>
 
-            <img className="w-8" src={user} alt="user" />
-          </Nav>
-        </Navbar>
-      </div>
+              <li className="navItem">
+                <a href="#" className="navLink">
+                  Payment
+                </a>
+              </li>
+              <li className="navItem">
+                <a href="#" className="navLink">
+                  Promo
+                </a>
+              </li>
+              <li className="navItem">
+                <a href="#" className="navLink">
+                  History
+                </a>
+              </li>
+              <Dropdown
+                menu={{
+                  items,
+                }}
+                placement="bottomRight"
+                arrow
+              >
+                <Button className="bg-green-600 text-white">
+                  Hi Muhammad Farizqi Nurdin
+                </Button>
+              </Dropdown>
+            </ul>
+            <div onClick={removeNavbar} className="closeNavbar">
+              <AiFillCloseCircle className="icon" />
+            </div>
+          </div>
+          <div onClick={showNav} className="toogleNavbar">
+            <TbGridDots className="icon" />
+          </div>
+        </header>
+      </section>
     </>
   );
 };

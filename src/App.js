@@ -3,6 +3,7 @@ import './App.css';
 import Promo from "./components/promo/Promo";
 import Details from "./pages/details-promo";
 import DetailsPDAM from "./pages/details-promo/pdam";
+import Footer from "./components/footer/Footer";
 import DetailsPLN from "./pages/details-promo/pln";
 import Home from "./pages/home/Home";
 import Topup from "./components/topup/topup";
@@ -14,6 +15,7 @@ import Register from "./components/register/index"
 import Login from "./components/login/index"
 import Setting from "./pages/setting/Setting";
 import CardHistory from "./components/card-history";
+import Price from "./pages/Price/Price"
 import { Bill, PaymentBill } from "./components";
 
 
@@ -38,6 +40,9 @@ function App(){
         <Route path="/ch" element={<CardHistory/>}/>
         <Route path="/bill" element={<Bill/>}/>
         <Route path="/pay" element={<PaymentBill/>}/>
+        <Route path="/price" element={<Price/>}/>
+        <Route path="/footer" element={<Footer/>}/>
+
       </Routes>
     </BrowserRouter>
    </>

@@ -1,54 +1,15 @@
 import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import Navigation from "../../components/header/Navigation";
-import api from "../../services/api";
 
 const Setting = () => {
-  const [provinces, setProvinces] = useState([]);
-  const [cities, setCities] = useState([]);
-  const [city, setCity] = useState("");
-  let [provinceId, setProvinceId] = useState(0);
-
-  const getDataProvinces = async () => {
-    try {
-      const url = "daerahindonesia/provinsi";
-      const response = await api.get(url);
-      const payload = [...response?.data?.provinsi];
-      setProvinces(payload);
-      console.log("Ini Data Provinsi ", provinces);
-    } catch (error) {
-      alert(error.message);
-      console.log(error);
-    }
-  };
-
-  const getDataCities = async () => {
-    try {
-      let url = `daerahindonesia/kota?id_provinsi=${provinceId}`;
-      const response = await api.get(url);
-      const payload = [...response?.data?.kota_kabupaten];
-      setCities(payload);
-      console.log("Ini Data Kota ", cities);
-      console.log("Ini url kota ", url);
-    } catch (error) {
-      alert(error.message);
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    getDataCities();
-    console.log("Ini City" + city);
-    console.log("Ini ProvinceId" + provinceId);
-    getDataProvinces();
-  }, [provinceId, city]);
-
+  const Navigate = useNavigate();
   return (
     <>
-      <div className="container-md">
-        <Navigation></Navigation>
-        <h1 className="text-2xl">My Account</h1>
+      <Navigation></Navigation>
+      <div className="container">
+        <h1 className="text-2xl mt-3">My Account</h1>
         <p>Update your current profile</p>
       </div>
       <div className="dashboard-content mt-3">
@@ -109,38 +70,26 @@ const Setting = () => {
                       </div>
                       <div className="col-md-4 mt-2">
                         <div className="form-group">
-                          <label htmlFor="province">Province</label>
-                          <select
-                            name="province"
-                            id="province"
+                          <label htmlFor="provinces">Provinces</label>
+                          <input
+                            type="text"
                             className="form-control"
-                            value={provinceId}
-                            onChange={(e) => setProvinceId(e.target.value)}
-                          >
-                            {provinces.map((item) => (  
-                              <option value={item.id} key={item.id} selected>
-                                {item.nama}
-                              </option>
-                            ))}
-                          </select>
+                            id="provinces"
+                            name="provinces"
+                            value={"West Sumatera"}
+                          />
                         </div>
                       </div>
                       <div className="col-md-4 mt-2">
                         <div className="form-group">
                           <label htmlFor="cities">Cities</label>
-                          <select
-                            name="cities"
-                            id="cities"
+                          <input
+                            type="text"
                             className="form-control"
-                            value={city}
-                            onChange={(e) => setCity(e.target.value)}
-                          >
-                            {cities.map((item) => (
-                              <option value={item?.id} key={item?.id} selected>
-                                {item.nama}
-                              </option>
-                            ))}
-                          </select>
+                            id="cities"
+                            name="cities"
+                            value={"Padang"}
+                          />
                         </div>
                       </div>
                       <div className="col-md-4 mt-2">
@@ -179,13 +128,6 @@ const Setting = () => {
                           />
                         </div>
                       </div>
-                      <div className="col-md-12 mt-4">
-                        <div className="form-group">
-                          <label>Thumnails</label>
-                          <input type="file" className="form-control" />
-                          <p className="text-muted">Upload Photo</p>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -196,6 +138,7 @@ const Setting = () => {
                 <button
                   type="submit"
                   className="btn btn-success bg-green-700 hover:bg-green-500 px-5"
+                  onClick={() => Navigate(`/home`)}
                 >
                   Save Now
                 </button>
