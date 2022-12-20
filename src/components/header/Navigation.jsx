@@ -1,13 +1,12 @@
 import React from "react";
 import "../../assets/styleHeader.css";
-import { MdPayments } from "react-icons/md";
+
 import { AiFillCloseCircle } from "react-icons/ai";
 import { TbGridDots } from "react-icons/tb";
 import logo from "./../../assets/logo/logo.svg";
-import user from "./../../assets/logo/user.svg";
 import { useState } from "react";
-import { DownOutlined, SmileOutlined } from "@ant-design/icons";
-import { Dropdown, Space, Button } from "antd";
+import { Dropdown, Button } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const [active, setActive] = useState("navBar");
@@ -17,14 +16,11 @@ const Navigation = () => {
   const removeNavbar = () => {
     setActive("navBar");
   };
+  const Navigate = useNavigate();
   const items = [
     {
       key: "1",
-      label: (
-        <a target="_blank" rel="noopener noreferrer" href="/setting">
-          My Account
-        </a>
-      ),
+      label: <button onClick={() => Navigate(`/setting`)}>My Account</button>,
     },
   ];
   return (
@@ -37,25 +33,30 @@ const Navigation = () => {
           <div className={active}>
             <ul className="navLists flex">
               <li className="navItem">
-                <a href="#" className="navLink">
+                <button className="navLink" onClick={() => Navigate(`/home`)}>
                   Beranda
-                </a>
+                </button>
               </li>
-
               <li className="navItem">
-                <a href="#" className="navLink">
+                <button
+                  className="navLink"
+                  onClick={() => Navigate(`/payment`)}
+                >
                   Payment
-                </a>
+                </button>
               </li>
               <li className="navItem">
-                <a href="#" className="navLink">
+                <button className="navLink" onClick={() => Navigate(`/promo`)}>
                   Promo
-                </a>
+                </button>
               </li>
               <li className="navItem">
-                <a href="#" className="navLink">
+                <button
+                  className="navLink"
+                  onClick={() => Navigate(`/history`)}
+                >
                   History
-                </a>
+                </button>
               </li>
               <Dropdown
                 menu={{

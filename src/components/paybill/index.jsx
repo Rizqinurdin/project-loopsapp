@@ -42,7 +42,7 @@ function PaymentBill() {
                 <button
                   type="submit"
                   className="btn hover:bg-kedua bg-utama text-white text-xl ring-2 ring-kedua hover:ring-utama"
-                  onClick={() => Navigate(`/invoice`)}
+                  onClick={() => Navigate(`/price`)}
                 >
                   Pay
                 </button>

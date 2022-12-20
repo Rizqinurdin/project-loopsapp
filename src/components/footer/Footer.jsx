@@ -8,7 +8,7 @@ const Footer = () => {
     <>
       <div
         id="contact"
-        className="mt-20  mx-auto py-16 px-10 grid lg:grid-cols-3 gap-8 text-gray-300"
+        className="mx-auto py-16 px-10 grid lg:grid-cols-3 gap-8 text-gray-300"
       >
         <div>
           <h1 className="w-full text-3xl font-bold text-black font-[poppins]">

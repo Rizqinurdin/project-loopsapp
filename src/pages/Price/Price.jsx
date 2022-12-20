@@ -66,7 +66,7 @@ function Price() {
                 <button
                   type="submit"
                   className="btn hover:bg-green-400 bg-green-500 text-white font-[poppins]"
-                  onClick={() => Navigate(`/bill`)}
+                  onClick={() => Navigate(`/invoice`)}
                 >
                   Pay
                 </button>
