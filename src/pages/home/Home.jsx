@@ -1,16 +1,15 @@
 import React from "react";
 import { Carousel } from "antd";
 import Navigation from "../../components/header/Navigation";
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import Promo from "../../assets/logo/icon1.png";
 import Pay from "../../assets/logo/icon2.png";
 import History from "../../assets/logo/icon3.png";
-import Setting from "../../assets/logo/settings.png";
 import User from "../../assets/logo/users.png";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 
-const contentStyle: React.CSSProperties = {
+const contentStyle = {
   height: "300px",
   color: "#fff",
   lineHeight: "160px",
