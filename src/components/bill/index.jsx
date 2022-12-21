@@ -18,7 +18,7 @@ function Bill() {
             <form>
               <div className="grid grid-cols-1 justify-items-center w-full">
                 <div className=" col-span-1">
-                  <img src={BPJS} className=" h-36" />
+                  <img src={BPJS} alt="bpjs" className=" h-36" />
                 </div>
               </div>
               <div className="mb-3">
