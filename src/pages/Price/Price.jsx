@@ -4,6 +4,23 @@ import Navigation from "../../components/header/Navigation";
 
 function Price() {
   const Navigate = useNavigate();
+  var a = 1000000;
+  var merchantPayment = "BPJS";
+  var jenis = "";
+  var discount, bayar;
+  if(merchantPayment.toUpperCase() == "BPJS"){
+    discount = a*25/100;
+    bayar = a - discount;
+  }else if (merchantPayment.toUpperCase() == "PDAM") {
+    discount = a*50/100;
+    bayar = a - discount;
+  }else if (jenis.toUpperCase() == "TOPUP") {
+    discount = a*10/100;
+    bayar = a - discount;
+  }else{
+    discount = 0;
+    bayar = a - discount;
+  }
   return (
     <>
       <Navigation></Navigation>
@@ -28,7 +45,7 @@ function Price() {
                       className="form-control"
                       id="baseprice"
                       name="baseprice"
-                      value="1000000"
+                      value={a}
                     />
                   </div>
                 </div>
@@ -40,7 +57,7 @@ function Price() {
                       className="form-control"
                       id="discount"
                       name="discount"
-                      value={"20000"}
+                      value={discount}
                     />
                   </div>
                 </div>
@@ -52,7 +69,7 @@ function Price() {
                       className="form-control"
                       id="totalPrice"
                       name="totalPrice"
-                      value={"80000"}
+                      value={bayar}
                     />
                   </div>
                 </div>
