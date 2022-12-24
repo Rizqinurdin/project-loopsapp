@@ -84,22 +84,29 @@ const Index = () => {
       </section>
       <br />
       <div data-aos="fade-up" className="row landingImage">
-        <div className="col-md-6">
-          <img className="w-full h-96 mt-5" src={Working} alt="working" />
+        <div className="col-md-4">
+          <img className="max-w-lg h-96 mt-5" src={Working} alt="working" />
         </div>
-        <div className="col-md-5 mt-5">
+        <div className="col-md-6 text-justify ml-32 md:">
           <h1 className="mt-4 text-3xl font-bold">Tentang Kami</h1> <br />
-          <span className="text-base font-thin leading-3">
+          <span className="text-sm leading-3">
             {" "}
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Voluptatum, doloribus enim sequi, voluptas cupiditate, adipisci quam
-            saepe repellendus assumenda inventore aliquam rem consequatur
-            similique beatae iste minima! Labore ipsum quis, id enim ea
-            voluptatem totam dicta autem, delectus veniam adipisci perferendis
-            sed eligendi. Cum architecto voluptas, provident saepe sunt facilis
-            sapiente ducimus explicabo velit laboriosam soluta laborum
-            reprehenderit, non minima. Quidem ea unde, quisquam deleniti commodi
-            nam eum hic illo!
+            Loopsapps adalah aplikasi smart berbasis website yang akan
+            memberikan anda kemudahan dan cepat dalam bertransaksi dan melakukan
+            pembayaran ke berbagai merchant yang sudah tersedia di aplikasi
+            loops ini. Loopsapp adalah aplikasi pembayaran dan transaksi serba
+            bisa, simple, instan dan aman yang siap buat segala transaksi
+            finansial anda jadi lebih menyenangkan. Didorong oleh keyakinan
+            mendasar bahwa memiliki akses ke layanan keuangan menciptakan
+            peluang, Loopsapp berkomitmen untuk mendemokratisasi dan
+            memberdayakan orang dan bisnis untuk bergabung dan berkembang dalam
+            ekonomi global. Platform pembayaran digital terbuka kami memberikan
+            kemudahan untuk terus terhubung dan bertransaksi dengan cara baru
+            dan canggih secara online melalui website resmi kami. Melalui
+            kombinasi inovasi teknologi dan kemitraan strategis, Loopsapp
+            menciptakan cara yang lebih baik dan mudah untuk berstransaksi
+            antara user dan merchant atau pihak ketiga dan fleksibilitas saat
+            melakukan pembayaran.
           </span>
         </div>
       </div>

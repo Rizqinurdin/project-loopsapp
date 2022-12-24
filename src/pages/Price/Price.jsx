@@ -8,16 +8,21 @@ function Price() {
   var merchantPayment = "BPJS";
   var jenis = "";
   var discount, bayar;
-  if(merchantPayment.toUpperCase() == "BPJS"){
-    discount = a*25/100;
+  if (merchantPayment.toUpperCase() === "BPJS") {
+    discount = (a * 25) / 100;
     bayar = a - discount;
-  }else if (merchantPayment.toUpperCase() == "PDAM") {
-    discount = a*50/100;
+  } else if (merchantPayment.toUpperCase() === "PDAM") {
+    discount = (a * 50) / 100;
     bayar = a - discount;
-  }else if (jenis.toUpperCase() == "TOPUP") {
-    discount = a*10/100;
-    bayar = a - discount;
-  }else{
+  } else if (jenis.toUpperCase() === "TOPUP") {
+    if (a >= 100000) {
+      discount = (a * 10) / 100;
+      bayar = a - discount;
+    } else {
+      discount = 0;
+      bayar = a - discount;
+    }
+  } else {
     discount = 0;
     bayar = a - discount;
   }
